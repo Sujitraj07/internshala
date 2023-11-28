@@ -1,0 +1,81 @@
+/*Start Userprofile page design */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+        .navbar {
+    background-color: dimgray;
+    overflow: hidden;
+    padding: 14px 16px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.user-name {
+    float: left;
+    color: white;
+    padding: 14px 16px;
+    font-size: 16px;
+}
+
+.nav-btn {
+    background-color: darkgray;
+    float: right; /* Use float: right; to move the buttons to the right */
+    display: inline-flex;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.nav-btn:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/*update area  */
+.update-area{
+    width: 250px;
+    height: 150px;
+    background-color: DarkSeaGreen;
+    display: block;
+    float: right;
+    margin-top: 100px;
+    margin-left: 0px;
+}
+table tr td{
+    border: 1px solid black;
+}
+h1{
+    margin-left: 50px;
+}
+.message-area{
+    height: 30%;
+    width: 50%;
+    background-color:  LightSeaGreen;
+    padding: 20px;
+    
+}
+#friends-updates{
+    display: block;
+ 
+    margin-top: 100px;
+    
+}
+
+#status-update-form{
+    float: center;
+}
+/*end Userprofile page design */
+ 
+/*Start friends page design */
+
+/*end friends page design */

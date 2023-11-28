@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"> 
+    
+    <title>User Profile</title>
+    
+</head>
+<body>
+<div class="navbar">
+    <div class="user-name">user name</div>
+    <button class="nav-btn"><a href="friends.html" target="_blank">Friends</a></button>
+    <button class="nav-btn">Logout</button>
+</div>
+        <h1>Update</h1>      
+
+        <div id="friends-updates" class="message-area">
+            <!-- This section will be dynamically populated with friend updates -->
+        </div>
+
+
+        <div class="update-area">
+        <!-- Status Update Form -->
+        <form id="status-update-form">
+            <label for="status-update">Post a new update:</label><br>
+            <textarea id="status-update" rows="4" cols="20"></textarea><br>
+            <button type="button" onclick="postUpdate()">Post</button>
+        </form>
+        </div>
+
+        <script>
+            // JavaScript logic for posting updates and displaying friends' updates
+            function postUpdate() {
+                // Get the new update text
+                var newUpdate = document.getElementById("status-update").value;
+    
+                // Create a new update element
+                var updateElement = document.createElement("div");
+                updateElement.innerHTML = "<p>" + newUpdate + "</p><small>Just now</small>";
+    
+                // Append the new update to the friends updates section
+                var friendsUpdates = document.getElementById("friends-updates");
+                friendsUpdates.insertBefore(updateElement, friendsUpdates.firstChild);
+    
+                // Clear the input field
+                document.getElementById("status-update").value = "";
+            }
+    
+            // Assume you have an array of friend updates in the format { text: "update text", time: "timestamp" }
+            var friendUpdates = [
+                { text: "Friend update 1", time: "Congratulations to all the people who cleared round 1" },
+                { text: "Friend update 2", time: "Hello friends, All the best for your Round 2 of the selection process." },
+                // Add more friend updates as needed
+            ];
+    
+            // Sort friend updates by time
+            friendUpdates.sort((a, b) => new Date(b.time) - new Date(a.time));
+    
+            // Display up to 20 friend updates
+            var maxUpdates = Math.min(20, friendUpdates.length);
+            for (var i = 0; i < maxUpdates; i++) {
+                var updateElement = document.createElement("div");
+                updateElement.innerHTML = "<p>" + friendUpdates[i].text + "</p><small>" + friendUpdates[i].time + "</small>";
+                document.getElementById("friends-updates").appendChild(updateElement);
+            }
+        </script>
+</body>
+</html>
