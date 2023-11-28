@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Friend Request System</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<style>
+    
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  /*header start*/
+  .navbar {
+    background-color: dimgray;
+    overflow: hidden;
+    padding: 14px 16px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.user-name {
+    float: left;
+    color: white;
+    padding: 14px 16px;
+    font-size: 16px;
+}
+
+.nav-btn {
+    background-color: darkgray;
+    float: right; /* Use float: right; to move the buttons to the right */
+    display: inline-flex;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.nav-btn:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+
+  /*friends page start*/
+ 
+  
+  #friend-requests, #friends, #all-users {
+    flex: 1;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    color: #555;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    margin-bottom: 10px;
+  }
+  
+  button {
+    padding: 8px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Add some spacing between sections */
+  #friends, #all-users {
+    margin-left: 20px;
+  }
+  
+  /* Add a bit of spacing to buttons */
+  button {
+    margin-right: 5px;
+  }    
+</style>
+<body>
+
+<div class="navbar">
+    <div class="user-name">John Doe</div>
+    <button class="nav-btn">Friends</button>
+    <button class="nav-btn">Logout</button>
+</div>
+
+  <div id="friend-requests">
+    <h2>Friend Requests</h2>
+    <ul id="friend-request-list"></ul>
+  </div>
+
+  <div id="friends">
+    <h2>Friends</h2>
+    <ul id="friends-list"></ul>
+  </div>
+
+  <div id="all-users">
+    <h2>All Users</h2>
+    <ul id="all-users-list"></ul>
+  </div>
+
+  <script src="./script.js"></script>
+  
+</body>
+</html>
